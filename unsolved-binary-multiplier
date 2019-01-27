@@ -1,6 +1,10 @@
+THE PROBLEM
+
 Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
 
 The binary number returned should be a string.
+
+THOUGHT PROCESS
 
 def add_binary(a,b):
     a*b    
@@ -8,10 +12,12 @@ example 2+2 = 100
     
 change the last "0" to a "1" to add one
 If every digit is a "1" Add a "1" to the front of the number, and "reset" all the other digits to 0
+I can't figure out the missing rules here to create a proper method I'm going to try a different approach
+I need to figure out what binary even is... see chart below.
 
 
-
-Decimal Binary  #start with zero
+Decimal Binary  Rule
+                #start with zero
 0	    0       #last digit is a 0: change to 1
 1	    1       #all digits are 1: concatenate 1 to beginning, change all digits to 0
 2	    10      #last digit is a 0: change to 1
@@ -33,7 +39,24 @@ binary = "0"
 if (binary[len(binary)-1:]) == "0":
     binary = (binary[:len(binary)-1]) + ("1")
     
-    AN EASIER NON-CONCATENATION METHOD
+    A CLEANER BUT HARDER TO CONSIDER NON-CONCATENATION METHOD
+    Unlike our decimal (base ten) number system binary is a base 2 number system
+    This means that in our number system the number 999 is 900+90+9 (multiples of 10)
+    in binary 999 is 1111100111
+    if you keep doubling 1 until it is larger than the target number you get:
+    1+2+4+8+16+32+64+128+256+512+(1024)* the 1024 is too high and doesnt get added to our array
+    now we iterate through to see which of these gets added
+    512 = 1 yes add it (total 512)
+    256 = 1 yes add it (total 768 still less than 999)
+    128 = 1 yes add it (total 896 keep going)
+    64 = 1 yes add it (total 960 getting close to 999)
+    32 = 1 yes add it (total 992 very close to 999 probably cannot add 16)
+    16 = 0 dont add it ( total 992 +8 would be 1000 next will be a 0)
+    
+    
+    
+                                   
+    
     multiply the numbers, then convert to binary.
     There seems to be an easier way to do this where you input a number and can get binary
     you take the number and put in an array
