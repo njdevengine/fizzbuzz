@@ -38,6 +38,6 @@ if (binary[len(binary)-1:]) == "0":
     There seems to be an easier way to do this where you input a number and can get binary
     you take the number and put in an array
     then you can cast it as an integer and divide by two
-    keep doing that and appending the results in an array until the integer is 0
+    keep doing that and appending the results in an array (right to left) until the integer is 0
     then you check if each number in the array is odd aka NOT divisible by 2
     1 for odd 0 for even numbers, the result is the binary number
