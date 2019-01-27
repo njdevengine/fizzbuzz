@@ -1,3 +1,8 @@
+#program takes in strings like credit card numbers and maskifies them
+#i.e. only shows last 4 digits, replacing others with '#'
+
 def maskify(cc):
-    cc = ''
-    (((len(cc)-4)*'#')+(cc[:4]))
+    if ((len(cc)) <=4):
+        return(cc)
+    else:
+        return (str(((len(cc)-4)*'#')+(cc[len(cc)-4:])))
