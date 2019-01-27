@@ -7,7 +7,7 @@ The binary number returned should be a string.
 ####THOUGHT PROCESS
 
 def add_binary(a,b):
-    a*b    
+    a+b    
 example 2+2 (decimal number system) = 100 (binary number)
 
 Looking at examples of binary numbers I am writing out the rules I think get from one step to the next
@@ -41,6 +41,8 @@ if (binary[len(binary)-1:]) == "0":
     binary = (binary[:len(binary)-1]) + ("1")
     
 ####A CLEANER BUT HARDER TO CONSIDER NON-CONCATENATION METHOD
+    This time im going to look up a higher number in decimal and convert it to binary
+    Then I'm going to unpack the logic used to create the number
     Unlike our decimal (base ten) number system binary is a base 2 number system
     This means that in our number system the number 999 is 900+90+9 (multiples of 10)
     in binary 999 is 1111100111
@@ -59,6 +61,18 @@ if (binary[len(binary)-1:]) == "0":
     1 = 1 yess add it (grand total 999)
     
     This looks like a legit method. I can now write a script. Here's the plan...
+    
+    take in a target number
+    create the doubler function and append the numbers into an array
+    stop adding when the doubled number is over the target
+    keep adding the largest number in the array using a [sl:ice]
+    if its not greater than target "1" and keep a running total if it goes over go for "0"
+    Iterate through til total == target
+    boom boom pow...
+    find a nice way to read or spit out the binary number.
+    
+    Now to go write this in python.
+    
     
     
     
