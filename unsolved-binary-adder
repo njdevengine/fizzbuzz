@@ -1,0 +1,25 @@
+Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+
+The binary number returned should be a string.
+
+def add_binary(a,b):
+    #your code here
+    
+change the last "0" to a "1" to add one
+If every digit is a "1" Add a "1" to the front of the number, and "reset" all the other digits to 0
+
+0 = 0    
+1 = 1
+2 = 10
+3 = 11
+4 = 100
+5 = 110 
+6 = 111
+7 =
+8 =
+9 =
+10 =
+
+binary = "0"
+if (binary[len(binary)-1:]) == "0":
+    binary = (binary[:len(binary)-1]) + ("1")
