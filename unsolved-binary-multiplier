@@ -1,19 +1,20 @@
-THE PROBLEM
+####THE PROBLEM
 
 Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
 
 The binary number returned should be a string.
 
-THOUGHT PROCESS
+####THOUGHT PROCESS
 
 def add_binary(a,b):
     a*b    
-example 2+2 = 100
-    
+example 2+2 (decimal number system) = 100 (binary number)
+
+Looking at examples of binary numbers I am writing out the rules I think get from one step to the next
 change the last "0" to a "1" to add one
 If every digit is a "1" Add a "1" to the front of the number, and "reset" all the other digits to 0
 I can't figure out the missing rules here to create a proper method I'm going to try a different approach
-I need to figure out what binary even is... see chart below.
+I need to figure out what binary even is... see chart & starter script below.
 
 
 Decimal Binary  Rule
@@ -39,7 +40,7 @@ binary = "0"
 if (binary[len(binary)-1:]) == "0":
     binary = (binary[:len(binary)-1]) + ("1")
     
-    A CLEANER BUT HARDER TO CONSIDER NON-CONCATENATION METHOD
+####A CLEANER BUT HARDER TO CONSIDER NON-CONCATENATION METHOD
     Unlike our decimal (base ten) number system binary is a base 2 number system
     This means that in our number system the number 999 is 900+90+9 (multiples of 10)
     in binary 999 is 1111100111
@@ -52,6 +53,12 @@ if (binary[len(binary)-1:]) == "0":
     64 = 1 yes add it (total 960 getting close to 999)
     32 = 1 yes add it (total 992 very close to 999 probably cannot add 16)
     16 = 0 dont add it ( total 992 +8 would be 1000 next will be a 0)
+    8 = 0 dont add it (total 992 +4 is fine)
+    4 = 1 yes add it (total 996 keep going)
+    2 = 1 yes add it (total 998 one more)
+    1 = 1 yess add it (grand total 999)
+    
+    This looks like a legit method. I can now write a script. Here's the plan...
     
     
     
