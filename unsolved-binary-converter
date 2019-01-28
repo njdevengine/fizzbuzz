@@ -73,6 +73,17 @@ if (binary[len(binary)-1:]) == "0":
     
     Now to go write this in python.
     
+    num = 1
+    while num < 999
+        double num (and add new number to an array)
+        [1,2,4,8,16,32,64,128,256,512]
+        Then check if each number in the array can be added without exceeding the array
+        if it can put a 1 in a new string
+        
+
+    starting with 512, iterate through the array and keep a running total
+    checking if its less than 999
+    
     
     
     
