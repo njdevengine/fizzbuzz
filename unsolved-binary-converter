@@ -1,15 +1,13 @@
 ####THE PROBLEM
 
-Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+Implement a function that converts a number to binary without typecasting using bin. i.e. bin(999)
 
-The binary number returned should be a string.
-
-****FUNCTION
+###FUNCTION
 
 #makes function that does binary conversion on 999
 def binary_conversion(target):
     #defines my array and sets numbers for the doubler
-    array = []
+    array = [1]
     num = 1
     total = 0
     i = 0
@@ -17,20 +15,16 @@ def binary_conversion(target):
     while num < target:
         num = num*2
         array.append(num)
-    print(array)
     endarray = (len(array)-2)
-    print(endarray)
-    print(target)
     #will store bool numbers as an array
     boolie = []
-    #array ends at 8
-    end = (len(array))
-    print(end)
+    end = (len(array)-1)
+    #checks if each number can be added to total
+    #w/o exceeding target
+    #adds '1' to boolie if true, else '0'
     for x in reversed(range(0,end)):
         if ((array[x]) + total) <= target:
             total = array[x] + total
-            print (str(array[x]) +" is @ myarray "+ str(x) +", adding a 1 to boolie \n")
-            print("the new total is: " + str(total))
             boolie.append("1")
         else:
             boolie.append("0")
@@ -40,7 +34,9 @@ def binary_conversion(target):
 
 
 
-***END FUNCTION
+###END FUNCTION
+
+###Test function
 myarray = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512]
 total = 0
 target = 999
@@ -61,7 +57,7 @@ for x in reversed(range(0,end)):
 boolie = "".join(boolie)
 print(boolie)
 
-***TEST FUNCTION END
+###TEST FUNCTION END
 
 
 
