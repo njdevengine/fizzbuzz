@@ -26,24 +26,24 @@ def binary_conversion(target):
 
 
 ***END FUNCTION
-myarray = [2, 4, 8, 16, 32, 64, 128, 256, 512]
+myarray = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512]
 total = 0
 target = 999
 #will store bool numbers as an array
 boolie = []
 #array ends at 8
 end = (len(myarray))
+print(end)
 for x in reversed(range(0,end)):
-    if ((myarray[x]) + total) < target:
+    if ((myarray[x]) + total) <= target:
         total = myarray[x] + total
-        print (str(myarray[x]) +" is myarray x, adding a 1 to boolie")
+        print (str(myarray[x]) +" is @ myarray "+ str(x) +", adding a 1 to boolie \n")
         print("the new total is: " + str(total))
         boolie.append("1")
     else:
-        print("adding a 0 to boolie")
+        print("adding a 0 to boolie \n")
         boolie.append("0")
 print(boolie)
-
 
 ***TEST FUNCTION END
 
