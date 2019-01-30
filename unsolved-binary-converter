@@ -4,6 +4,27 @@ Implement a function that adds two numbers together and returns their sum in bin
 
 The binary number returned should be a string.
 
+#makes function that does binary conversion on 999
+def binary_conversion(target):
+    #defines my array and sets numbers for the doubler
+    array = []
+    num = 1
+    total = 0
+    i = 0
+    #doubler pops doubled numbers into array
+    while num < target:
+        num = num*2
+        array.append(num)
+    #while loop runs until total gets exceeded
+    while total < target:
+        total = (array[i])+total
+        i = i + 1
+        print(total)
+
+
+
+
+
 ####THOUGHT PROCESS
 
 def add_binary(a,b):
