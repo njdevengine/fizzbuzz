@@ -4,7 +4,7 @@ Implement a function that converts a number to binary without typecasting using 
 
 ###FUNCTION
 
-#makes function that does binary conversion on 999
+#makes function that does binary conversion on any number
 def binary_conversion(target):
     #defines my array and sets numbers for the doubler
     array = [1]
