@@ -33,7 +33,7 @@ target = 999
 boolie = []
 #array ends at 8
 end = (len(myarray))
-for x in range(0,end):
+for x in reversed(range(0,end)):
     if ((myarray[x]) + total) < target:
         total = myarray[x] + total
         print (str(myarray[x]) +" is myarray x, adding a 1 to boolie")
