@@ -13,15 +13,30 @@ def binary_conversion(target):
     num = 1
     total = 0
     i = 0
-    boolarray = []
     #doubler pops doubled numbers into array
     while num < target:
         num = num*2
         array.append(num)
-    endarray = (len(array)-1)
-    del array[endarray]
     print(array)
+    endarray = (len(array)-2)
+    print(endarray)
     print(target)
+    #will store bool numbers as an array
+    boolie = []
+    #array ends at 8
+    end = (len(array))
+    print(end)
+    for x in reversed(range(0,end)):
+        if ((array[x]) + total) <= target:
+            total = array[x] + total
+            print (str(array[x]) +" is @ myarray "+ str(x) +", adding a 1 to boolie \n")
+            print("the new total is: " + str(total))
+            boolie.append("1")
+        else:
+            boolie.append("0")
+    boolie = "".join(boolie)
+    print(boolie)
+    
 
 
 
