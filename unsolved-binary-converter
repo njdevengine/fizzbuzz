@@ -18,19 +18,10 @@ def binary_conversion(target):
     while num < target:
         num = num*2
         array.append(num)
+    endarray = (len(array)-1)
+    del array[endarray]
     print(array)
-    #while loop runs until total gets exceeded
-    while total < target:
-        while i < (len(array)-1):
-            print(boolarray)
-            print(array[i])
-            if (array[i])+total < target:
-                boolarray.append("1")
-                total = (array[i])+total
-                i = i + 1
-            else:
-                boolarray.append("0")
-                i = i + 1
+    print(target)
 
 
 
