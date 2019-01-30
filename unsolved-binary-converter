@@ -43,6 +43,7 @@ for x in reversed(range(0,end)):
     else:
         print("adding a 0 to boolie \n")
         boolie.append("0")
+boolie = "".join(boolie)
 print(boolie)
 
 ***TEST FUNCTION END
