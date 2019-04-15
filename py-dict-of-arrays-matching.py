@@ -11,10 +11,10 @@ for a in people:
         for c in database:
             for d in database[c]:
                 if b == d:
-                    print(b,d)       
+                    print(str(a),b+" / "+str(c),d)
 #RETURNS:
-#Bob Bob
-#Nimrod Nimrod
-#Abe Abe
-#Qood Qood
-#Abaloney Abaloney
+# 100 Bob / 3 Bob
+# 100 Nimrod / 1 Nimrod
+# 100 Abe / 1 Abe
+# 101 Qood / 2 Qood
+# 102 Abaloney / 1 Abaloney
