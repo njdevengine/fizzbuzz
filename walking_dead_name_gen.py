@@ -19,3 +19,14 @@ for i in alpha:
 a = random.choice(names).title()
 b = random.choice(last_names).title()
 print(a,b)
+
+#alternatively, get all unique choices into master list
+master = []        
+for i in range(20000):
+    a = random.choice(names).title()
+    b = random.choice(last_names).title()
+    full_name = a+" "+b
+    master.append(full_name)
+    
+master = list(set(list(master)))
+print(random.choice(master))
